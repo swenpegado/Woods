@@ -5,22 +5,22 @@ pipeline {
 
     environment {
         // Replace with your Docker Hub username
-        DOCKER_HUB_USERNAME = 'your_docker_hub_username'
+        DOCKER_HUB_USERNAME = 'Swen7'
         // Replace with the ID of the Docker Hub credential you created in Jenkins
         DOCKER_HUB_CREDENTIALS_ID = 'dockerhub-credentials'
         // Replace with your Docker image name (e.g., nextjs-app)
-        IMAGE_NAME = 'your_docker_hub_username/nextjs-app' // Example: yourusername/my-nextjs-app
+        IMAGE_NAME = 'Swen7/MY APP' // Example: yourusername/my-nextjs-app
     }
 
     stages {
         stage('Checkout Code') {
-            steps {
-                // Pulls the latest code from your GitHub repository
-                git branch: 'main', url: "https://github.com/${env.GITHUB_USER}/${env.GITHUB_REPO}.git"
-                // NOTE: For simple public repos, Jenkins might auto-fill GITHUB_USER/GITHUB_REPO from project settings.
-                // If this fails, replace with: url: "https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git"
-            }
-        }
+    steps {
+        // Pulls the latest code from your GitHub repository
+        git branch: 'main', url: "https://github.com/swenpegado/Woods.git"
+        // NOTE: For simple public repos, Jenkins might auto-fill GITHUB_USER/GITHUB_REPO from project settings.
+        // If this fails, replace with: url: "https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git"
+    }
+}
 
         stage('Build Docker Image') {
             steps {
