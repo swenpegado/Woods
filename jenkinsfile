@@ -9,7 +9,7 @@ pipeline {
         // Replace with the ID of the Docker Hub credential you created in Jenkins
         DOCKER_HUB_CREDENTIALS_ID = 'dockerhub-credentials'
         // Replace with your Docker image name (e.g., nextjs-app)
-        IMAGE_NAME = 'Swen7/my app' // Example: yourusername/my-nextjs-app
+        IMAGE_NAME = 'Swen7/my-app' // Example: yourusername/my-nextjs-app
     }
 
     stages {
